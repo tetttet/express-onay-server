@@ -1,0 +1,41 @@
+curl -X POST http://localhost:8080/api/users \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Turan Yahya",
+    "username": "turan123",
+    "email": "turan@example.com",
+    "password": "securePassword123",
+    "city": "Istanbul",
+    "age": 18,
+    "phone_number": "+905555555555"
+  }'
+
+
+curl -X POST http://localhost:8080/api/users/admin \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "John Doe",
+    "username": "johndoe123",
+    "email": "john.doe@example.com",
+    "password": "password123",
+    "role": "user",
+    "image_url": "http://example.com/johndoe.jpg",
+    "city": "New York",
+    "age": 30,
+    "phone_number": "+1234567890"
+  }'
+
+
+curl -X POST http://localhost:8080/api/users/tutor \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Jane Smith",
+    "username": "janesmith456",
+    "email": "jane.smith@example.com",
+    "password": "securepassword456",
+    "role": "user",
+    "image_url": "http://example.com/janesmith.jpg",
+    "city": "Los Angeles",
+    "age": 25,
+    "phone_number": "+1987654321"
+  }'
