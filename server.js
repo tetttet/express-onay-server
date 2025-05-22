@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 8080;
 const userRoutes = require("./routes/userRoutes");
 const authRoutes = require("./routes/authRoutes");
 const courseRoutes = require("./routes/courseRoutes");
+const progressRoutes = require("./routes/progressRoutes");
 
 app.use(cors());
 app.use(express.json());
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/courses", courseRoutes);
+app.use("/api/progress", progressRoutes);
 
 app.listen(PORT, () => {
   console.log(`🚀 Сервер работает на http://localhost:${PORT}`);
